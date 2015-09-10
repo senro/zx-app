@@ -16,6 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -34,7 +35,25 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        
         navigator.splashscreen.hide();
+        
+        $('.app').hide();
+        $('#iframe').show();
+        $('#iframe').height($(window).height());
+        //$('#iframe').attr('src','http://zx.yearn.cc/web/webTest.html');
+        
+        $('#iframe')[0].onload=function(){
+             //$('#iframe')[0].contentWindow.postMessage('GPS','*');
+        }
+              
+        window.addEventListener('message',function(e){
+          
+            if(e.origin=='http://zx.yearn.cc'){
+                eval(e.data);
+            }
+
+        },false);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
