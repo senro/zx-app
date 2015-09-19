@@ -2,10 +2,10 @@
   "ProjectName": "test",
   "ProjectGuid": "20d03e94-fdd9-4729-b851-da3c238b203c",
   "projectVersion": 1,
-  "AppIdentifier": "com.telerik.test",
-  "DisplayName": "test",
-  "Author": "",
-  "Description": "test",
+  "AppIdentifier": "com.haowu.general",
+  "DisplayName": "装修神器",
+  "Author": "senro",
+  "Description": "让装修变得简单！",
   "BundleVersion": "1.0",
   "AndroidVersionCode": "1",
   "iOSDeviceFamily": [
@@ -41,5 +41,6 @@
     "ID_RESOLUTION_WVGA",
     "ID_RESOLUTION_WXGA",
     "ID_RESOLUTION_HD720P"
-  ]
+  ],
+  "iOSDeploymentTarget": "6.0"
 }
